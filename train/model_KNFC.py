@@ -49,8 +49,8 @@ names = ['HCT116',  'K562']
 name=names[0]
 m=pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/KNFC/HCT116seq1_train.csv',header=None)
 n=pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/KNFC/HCT116seq2_train.csv',header=None)
-X_1=np.array(m).reshape(4192,1024,1)
-X_2=np.array(n).reshape(4192,1024,1)
+X_1=np.array(m).reshape(4192,256,1)
+X_2=np.array(n).reshape(4192,256,1)
 
 y_tra=pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/HCT116labeltrain.txt',header=None)
 y_tra = utils.to_categorical(y_tra, 2)
@@ -69,8 +69,8 @@ for i,(train, test) in enumerate(kfold.split(y_tra)):
 
     def get_model():
         K.clear_session()
-        X1 = Input(shape=(1024, 1))
-        X2 = Input(shape=(1024, 1))
+        X1 = Input(shape=(256, 1))
+        X2 = Input(shape=(256, 1))
         x1 = Conv1D(filters=128, kernel_size=5, strides=1, padding='same', kernel_initializer='he_normal',
                     activation='relu')(X1)
         x1 = MaxPooling1D(pool_size=2, strides=2)(x1)
