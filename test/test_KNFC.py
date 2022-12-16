@@ -24,8 +24,8 @@ for name in names:
     name = names[0]
     m = pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/KNFC/HCT116seq1_test.csv', header=None)
     n = pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/KNFC/HCT116seq2_test.csv', header=None)
-    Xtes_1 = np.array(m).reshape(1797, 1024, 1)
-    Xtes_2= np.array(n).reshape(1797, 1024, 1)
+    Xtes_1 = np.array(m).reshape(1797, 256, 1)
+    Xtes_2= np.array(n).reshape(1797, 256, 1)
     #Xtes_1 = np.array(m).reshape(3314, 1024, 1)
     #Xtes_2= np.array(n).reshape(3314, 1024, 1)
     y_tes_1= pd.read_csv('D:/PycharmProjects/pythonProject/CapsNetYY1/feature encoding/HCT116labeltest.txt', header=None)
