@@ -10,6 +10,8 @@ data：The original data comes from Deepyy1.
 weight: The weights we trained can be tested directly.
 
 
+capsulelayers.py come from :https://github.com/Jhabindra-bioinfo/DeepCap-Kcr
+
 If you have any code questions please contact 983407086@qq.com.
 
 ##Reference
